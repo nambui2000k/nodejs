@@ -9,12 +9,16 @@ const verify = require('./verifyToken');
 const bcrypt = require('bcrypt');
 const bodyparser = require('body-parser');
 const jwt = require('jsonwebtoken');
+let cors = require('cors');
+
 
 
 
 
 app.use(bodyparser.urlencoded({extended: true}));
 app.use(bodyparser.json());
+app.use(cors())
+
 
 
 
